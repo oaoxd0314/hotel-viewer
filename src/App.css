@@ -242,6 +242,8 @@ h6 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  /* repeat(重複的次數,重複的長度) */
+  /* auto-fit => 自動填滿到螢幕寬度 */
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
@@ -253,6 +255,7 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
 }
 .services p {
   width: 80%;
@@ -321,6 +324,7 @@ h6 {
   background: rgba(0, 0, 0, 0.8);
   color: var(--mainWhite);
   padding: 0.3rem 0.6rem 0.5rem;
+  /* padding:(top right button left) */
   border-bottom-right-radius: 1rem;
   font-size: 0.5rem;
   text-align: center;
