@@ -26,5 +26,11 @@ export default function Room({ room }) {
 }
 
 Room.prototype={
-    
+    room:PropTypes.shape({
+        name:PropTypes.string.isRequired,
+        slug:PropTypes.string.isRequired,
+        image:PropTypes.arrayOf(PropTypes.string).isRequired,
+        price:PropTypes.number.isRequired,
+    })
+
 }
