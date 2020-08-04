@@ -9,9 +9,9 @@ export default class home extends Component {
     return (
       <>
       <Hero hero="defaultHero">
-        <Banner title="頂級套房" subtitle="最低$299起">
+        <Banner title="Premium Suite" subtitle="just $299 for now on">
           <Link to="/rooms" className="btn-primary">
-            現在查看
+            chek now
           </Link>
         </Banner>
       </Hero>
