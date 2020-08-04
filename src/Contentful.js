@@ -1,7 +1,6 @@
 import {createClient} from 'contentful'
-import { FaEnvelope } from 'react-icons/fa';
 
 export default createClient ({
-    space:process.env.REACT_APP_API_SPACE,
-    accessToken:process.env.REACT_APP_ACCESS_TOKEN
+    space:'wygkz4mpfqh6',
+    accessToken: 'tQi5B47I60bjB5uZstDSTLjDylzi1zN4ICUbACkPlVU'
 });
