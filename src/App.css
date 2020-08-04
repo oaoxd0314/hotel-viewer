@@ -66,7 +66,9 @@ h6 {
   cursor: pointer;
 }
 .btn-primary:hover {
+  /* hover => 當滑鼠移過去... 會改變成怎樣 */
   background: transparent;
+  /* transparent 轉透明 */
   color: var(--primaryColor);
 }
 .loading {

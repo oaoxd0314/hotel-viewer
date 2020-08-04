@@ -12,6 +12,7 @@ export default class FeaturedRoom extends Component {
 
     rooms = rooms.map((room) => {
       return <Room key={room.id} room={room} />;
+      
     });
     
     return (

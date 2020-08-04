@@ -3,7 +3,8 @@ import Hero from "../componment/Hero";
 import Banner from "../componment/Banner";
 import { Link } from "react-router-dom";
 import Service from "../componment/Service"
-import FeaturedRoom from "../componment/FeaturedRoom"
+import FeaturedRoom from "../componment/FeaturedRoom";
+import Button from "../componment/StyledHero";
 export default class home extends Component {
   render() {
     return (
@@ -17,7 +18,6 @@ export default class home extends Component {
       </Hero>
       <Service />
       <FeaturedRoom />
-
       </>
     );
   }

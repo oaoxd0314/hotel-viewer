@@ -20,7 +20,6 @@ class RoomProvider extends Component {
         sortedRooms:rooms,
         loading:false,
     })
-    console.log(rooms)
   }
 
   formatData(items) {
@@ -33,9 +32,15 @@ class RoomProvider extends Component {
     return temp
   }
 
+  getRoom=(slug)=>{
+    let tempRoom = [...this.state.rooms];
+    const room = tempRoom.find((room)=>room.slug===slug)
+    return room;
+  }
+
   render() {
     return (
-      <RoomContext.Provider value={{ ...this.state }}>
+      <RoomContext.Provider value={{ ...this.state,getRoom:this.getRoom }}>
         {this.props.children}
       </RoomContext.Provider>
     );
