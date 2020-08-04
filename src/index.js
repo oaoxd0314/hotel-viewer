@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { RoomProvider } from "./Context";
+import { RoomProvider } from "./context";
 import dotenv from 'dotenv'
 
 // require('dotenv').config();
