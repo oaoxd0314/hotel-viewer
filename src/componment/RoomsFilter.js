@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { RoomContext } from "../context";
+import { RoomContext } from "../Context";
 import Title from "../componment/Title";
 
 const getUnique = (items, value) => {
@@ -8,7 +8,6 @@ const getUnique = (items, value) => {
 
 export default function RoomsFilter({ rooms }) {
   const context = useContext(RoomContext);
-
   const {
     handleChange,
     type,
@@ -114,7 +113,7 @@ export default function RoomsFilter({ rooms }) {
           </div>
         </div>
         {/* end of size */}
-        {/* extra */}
+        {/* extras  */}
         <div className="form-group">
           <div className="single-extra">
             <input
@@ -126,7 +125,6 @@ export default function RoomsFilter({ rooms }) {
             />
             <label htmlFor="breakfast">breakfast</label>
           </div>
-
           <div className="single-extra">
             <input
               type="checkbox"
@@ -138,7 +136,7 @@ export default function RoomsFilter({ rooms }) {
             <label htmlFor="pets">pets</label>
           </div>
         </div>
-        {/*end of extra */}
+        {/* end of extras  */}
       </form>
     </section>
   );

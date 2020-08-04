@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { RoomContext } from "../context";
+import { RoomContext } from "../Context";
 import defaultBcg from "../images/room-1.jpeg";
 import Banner from "../componment/Banner";
 import { Link } from "react-router-dom";
@@ -44,7 +44,6 @@ export default class SingleRoom extends Component {
     const [main, ...defaultPic] = images;
     return (
       <>
-      
         <StyledHero img={main || this.state.defaultBcg}>
           <Banner title={`${name} room`}>
             <Link to="/rooms" className="btn-primary">
@@ -54,14 +53,12 @@ export default class SingleRoom extends Component {
         </StyledHero>
 
         <section className="single-room">
-
           <div className="single-room-images">
             {defaultPic.map((item, index) => {
               return <img key={index} src={item} alt={name} />;
             })}
           </div>
           <div className="single-room-info">
-
             <article className="desc">
               <h3>detail</h3>
               <p>{description}</p>
@@ -79,7 +76,6 @@ export default class SingleRoom extends Component {
               <h6>{breakfast && "free breakfast incoluded"}</h6>
               {/*y1 && y2 => if y1=true return y2 or if y1y2 =true return true !true return false*/}
             </article>
-
           </div>
 
           <section className="room-extras">
@@ -88,9 +84,14 @@ export default class SingleRoom extends Component {
               {extras.map((item, index) => {
                 return <li key={index}>-{item}</li>;
               })}
+
+              {/* for contenful */}
+              
+              {/* {extras && Object.values(extras).map((item, index) => {
+                  return <li key={index}>- {item}</li>
+                })} */}
             </ul>
           </section>
-
         </section>
       </>
     );
