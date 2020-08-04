@@ -1,20 +1,43 @@
 import React from "react";
 import RoomsFilter from "./RoomsFilter";
 import RoomsList from "./RoomsList";
-import { RoomConsumer } from "../context";
+import { withRoomConsumer } from "../context";
 import Loading from "./Loading";
-export default function RoomsContainer() {
+
+
+function RoomsContainer({ context }) {
+  const { loading, rooms, sortedRooms } = context;
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <RoomConsumer>
-      {(value) => {
-          console.log(value)
-        return (
-          <div>
-            <RoomsFilter />
-            <RoomsList />
-          </div>
-        );
-      }}
-    </RoomConsumer>
+    <div>
+      <RoomsFilter rooms={rooms} />
+      <RoomsList rooms={sortedRooms} />
+    </div>
   );
 }
+
+export default withRoomConsumer(RoomsContainer)
+
+
+// normal way to build consumer
+// export default function RoomsContainer() {
+//   return (
+// <RoomConsumer>
+//   {(value) => {
+//     const {loading,rooms,sortedRooms}=value
+//     if (loading) {
+//       return <Loading />;
+//     }
+//     console.log(value);
+//     return (
+//       <div>
+//         <RoomsFilter rooms={rooms}/>
+//         <RoomsList rooms={sortedRooms} />
+//       </div>
+//     );
+//   }}
+// </RoomConsumer>
+//   );
+// }
